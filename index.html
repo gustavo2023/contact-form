@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -22,23 +20,51 @@
     <main>
       <form id="contact-form" novalidate>
         <h1>Contact Us</h1>
+
+        <p class="visually-hidden">
+          Fields marked with an asterisk (*) are required.
+        </p>
+
         <fieldset class="user-information">
           <legend class="visuall-hidden">User Information</legend>
+
           <div class="input-container">
-            <label for="">Last Name *</label>
+            <label for="user-first-name">First Name *</label>
+            <input
+              type="text"
+              name="user-first-name"
+              id="user-first-name"
+              required
+              aria-required="true"
+            />
+            <span class="error-message first-name-error"
+              >This field is required</span
+            >
+          </div>
+
+          <div class="input-container">
+            <label for="user-last-name">Last Name *</label>
             <input
               type="text"
               name="user-last-name"
               id="user-last-name"
               required
+              aria-required="true"
             />
             <span class="error-message last-name-error"
               >This field is required</span
             >
           </div>
+
           <div class="input-container">
             <label for="user-email">Email Address *</label>
-            <input type="email" name="user-email" id="user-email" required />
+            <input
+              type="email"
+              name="user-email"
+              id="user-email"
+              required
+              aria-required="true"
+            />
             <span class="error-message email-error"
               >This field is required</span
             >
@@ -47,21 +73,26 @@
 
         <fieldset class="query-type">
           <legend>Query Type *</legend>
+
           <div class="radio-container">
             <input
               type="radio"
-              name="general-enquiry"
+              name="queryType"
               id="general-enquiry"
+              value="general"
               required
+              aria-required="true"
             />
             <label for="general-enquiry">General Enquiry</label>
           </div>
           <div class="radio-container">
             <input
               type="radio"
-              name="support-request"
+              name="queryType"
               id="support-request"
+              value="support"
               required
+              aria-required="true"
             />
             <label for="support-request">Support Request</label>
           </div>
@@ -78,6 +109,7 @@
             rows="10"
             cols="30"
             required
+            aria-required="true"
           ></textarea>
           <span class="error-message message-error"
             >This field is required</span
@@ -90,6 +122,7 @@
             name="agreement-input"
             id="agreement-input"
             required
+            aria-required="true"
           />
           <label for="agreement-input"
             >I consent to be contacted by the team *</label
