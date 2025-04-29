@@ -22,14 +22,17 @@
         <h1>Contact Us</h1>
 
         <p class="visually-hidden">
-          Fields marked with an asterisk (*) are required.
+          Fields marked with an asterisk (<span class="required">*</span>) are
+          required.
         </p>
 
         <fieldset class="user-information">
           <legend class="visually-hidden">User Information</legend>
 
           <div class="input-container">
-            <label for="user-first-name">First Name *</label>
+            <label for="user-first-name"
+              >First Name <span class="required">*</span></label
+            >
             <input
               type="text"
               name="user-first-name"
@@ -45,7 +48,9 @@
           </div>
 
           <div class="input-container">
-            <label for="user-last-name">Last Name *</label>
+            <label for="user-last-name"
+              >Last Name <span class="required">*</span></label
+            >
             <input
               type="text"
               name="user-last-name"
@@ -61,7 +66,9 @@
           </div>
 
           <div class="input-container">
-            <label for="user-email">Email Address *</label>
+            <label for="user-email"
+              >Email Address <span class="required">*</span></label
+            >
             <input
               type="email"
               name="user-email"
@@ -78,7 +85,7 @@
         </fieldset>
 
         <fieldset class="query-type" aria-describedby="query-error">
-          <legend>Query Type *</legend>
+          <legend>Query Type <span class="required">*</span></legend>
 
           <div class="radio-container">
             <input
@@ -110,7 +117,7 @@
         </fieldset>
 
         <div class="message-container">
-          <label for="message">Message *</label>
+          <label for="message">Message <span class="required">*</span></label>
           <textarea
             id="message"
             name="message"
@@ -137,7 +144,8 @@
             aria-invalid="false"
           />
           <label for="agreement-input"
-            >I consent to be contacted by the team *</label
+            >I consent to be contacted by the team
+            <span class="required">*</span></label
           >
           <span id="agreement-error" class="error-message agreement-error"
             >To submit this form, please consent to being contacted</span
