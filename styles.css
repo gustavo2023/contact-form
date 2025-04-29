@@ -329,7 +329,7 @@ input[type="checkbox"]:focus-visible {
   outline-offset: 1px;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
   form {
     padding: 2rem;
   }
