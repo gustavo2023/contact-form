@@ -137,6 +137,10 @@ fieldset {
   gap: 2rem;
 }
 
+label {
+  text-wrap: wrap;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
@@ -223,7 +227,7 @@ fieldset {
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   background-image: url("./assets/images/icon-radio-selected.svg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -233,7 +237,7 @@ fieldset {
 }
 
 .radio-container input[type="radio"]:focus-visible {
-  outline: 1px solid var(--green-600);
+  outline: 2px solid var(--green-600);
   outline-offset: 1px;
 }
 
@@ -243,6 +247,7 @@ fieldset {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 textarea {
@@ -259,4 +264,36 @@ textarea {
 textarea:focus-visible {
   outline: none;
   border: 2px solid var(--green-600);
+}
+
+.agreement-container {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid var(--grey-500);
+  cursor: pointer;
+  display: grid;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url("./assets/images/icon-checkbox-check.svg");
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 1px;
 }
