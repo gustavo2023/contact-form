@@ -171,6 +171,11 @@ fieldset {
   color: var(--red);
 }
 
+.query-type {
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .query-type legend {
   margin-bottom: 1rem;
 }
@@ -189,6 +194,7 @@ fieldset {
 .radio-container label {
   font-size: 1.2rem;
   cursor: pointer;
+  width: 100%;
 }
 
 .radio-container:has(input[type="radio"]:checked) {
