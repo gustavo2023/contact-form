@@ -285,7 +285,7 @@ textarea:focus-visible {
 }
 
 .agreement-container label {
-    padding-right: 1rem;
+  padding-right: 1rem;
 }
 
 input[type="checkbox"] {
@@ -331,6 +331,32 @@ input[type="checkbox"]:focus-visible {
 .submit-btn:focus-visible {
   outline: 2px solid var(--green-600);
   outline-offset: 1px;
+}
+
+.toast-container {
+  position: absolute;
+  top: 25px;
+  background-color: #283f41;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 15px;
+}
+
+.toast-header {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
 }
 
 @media (min-width: 40rem) {
