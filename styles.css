@@ -284,6 +284,10 @@ textarea:focus-visible {
   width: 100%;
 }
 
+.agreement-container label {
+    padding-right: 1rem;
+}
+
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
