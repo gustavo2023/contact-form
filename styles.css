@@ -98,7 +98,17 @@ body {
   background-color: var(--green-200);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 form {
+  max-width: 50rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,6 +123,7 @@ h1 {
   font-size: 2rem;
   color: var(--grey-900);
   align-self: flex-start;
+  margin-bottom: 1rem;
 }
 
 .visually-hidden {
@@ -258,7 +269,6 @@ textarea {
   color: var(--grey-900);
   cursor: pointer;
   resize: none;
-  min-height: 10rem;
 }
 
 textarea:focus-visible {
@@ -270,7 +280,6 @@ textarea:focus-visible {
   display: flex;
   gap: 1.2rem;
   align-items: center;
-  justify-content: center;
   margin-bottom: 1rem;
   width: 100%;
 }
@@ -318,4 +327,29 @@ input[type="checkbox"]:focus-visible {
 .submit-btn:focus-visible {
   outline: 2px solid var(--green-600);
   outline-offset: 1px;
+}
+
+@media (min-width: 48rem) {
+  form {
+    padding: 2rem;
+  }
+
+  .user-information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .user-information .input-container:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .query-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  textarea {
+    height: 8rem;
+  }
 }
