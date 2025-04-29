@@ -18,5 +18,28 @@
 
     <script src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <form id="contact-form" novalidate>
+        <h1>Contact Us</h1>
+        <fieldset class="user-information">
+          <legend class="visuall-hidden">User Information</legend>
+        </fieldset>
+        <fieldset class="query-type">
+          <legend>Query Type</legend>
+        </fieldset>
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="10"
+          cols="30"
+          required
+        ></textarea>
+        <input type="checkbox" name="" id="" />
+        <label for="">I consent to be contacted by the team</label>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
 </html>
