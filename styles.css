@@ -236,3 +236,27 @@ fieldset {
   outline: 1px solid var(--green-600);
   outline-offset: 1px;
 }
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--grey-500);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--grey-900);
+  cursor: pointer;
+  resize: none;
+  min-height: 10rem;
+}
+
+textarea:focus-visible {
+  outline: none;
+  border: 2px solid var(--green-600);
+}
