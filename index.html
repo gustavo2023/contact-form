@@ -32,23 +32,44 @@
               id="user-last-name"
               required
             />
+            <span class="error-message last-name-error"
+              >This field is required</span
+            >
           </div>
           <div class="input-container">
             <label for="user-email">Email Address *</label>
             <input type="email" name="user-email" id="user-email" required />
+            <span class="error-message email-error"
+              >This field is required</span
+            >
           </div>
         </fieldset>
+
         <fieldset class="query-type">
           <legend>Query Type *</legend>
           <div class="radio-container">
-            <input type="radio" name="general-enquiry" id="general-enquiry" />
+            <input
+              type="radio"
+              name="general-enquiry"
+              id="general-enquiry"
+              required
+            />
             <label for="general-enquiry">General Enquiry</label>
           </div>
           <div class="radio-container">
-            <input type="radio" name="support-request" id="support-request" />
+            <input
+              type="radio"
+              name="support-request"
+              id="support-request"
+              required
+            />
             <label for="support-request">Support Request</label>
           </div>
+          <span class="error-message query-error"
+            >Please select a query type</span
+          >
         </fieldset>
+
         <div class="message-container">
           <label for="message">Message *</label>
           <textarea
@@ -58,11 +79,23 @@
             cols="30"
             required
           ></textarea>
+          <span class="error-message message-error"
+            >This field is required</span
+          >
         </div>
+
         <div class="agreement-container">
-          <input type="checkbox" name="agreement-input" id="agreement-input" />
+          <input
+            type="checkbox"
+            name="agreement-input"
+            id="agreement-input"
+            required
+          />
           <label for="agreement-input"
             >I consent to be contacted by the team *</label
+          >
+          <span class="error-message agreement-error"
+            >To submit this form, please consent to being contacted</span
           >
         </div>
         <button type="submit">Submit</button>
