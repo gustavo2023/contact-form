@@ -94,7 +94,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px 16px;
+  padding: 32px 16px;
   background-color: var(--green-200);
 }
 
@@ -294,6 +294,28 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 1px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--green-600);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #0a5b4c;
+}
+
+.submit-btn:focus-visible {
   outline: 2px solid var(--green-600);
   outline-offset: 1px;
 }
