@@ -1,6 +1,6 @@
 # Frontend Mentor - Contact form solution
 
-This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,12 +11,7 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,20 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Contact form screenshot](./design/screencapture.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Contact Form](https://gustavo2023.github.io/contact-form/)
 
 ## My process
 
@@ -59,59 +46,37 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project provided valuable practice in building an accessible and interactive contact form. Key takeaways include:
 
-To see how you can add code snippets, see below:
+- **Enhanced Accessibility with ARIA:**
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+  - Leveraging `aria-describedby` to programmatically link input fields with their specific error message `<span>` elements. This ensures screen reader users receive clear, contextual error information when validation fails.
+  - Using `aria-required="true"` to clearly indicate mandatory fields to assistive technologies.
+  - Dynamically updating `aria-invalid` between `"true"` and `"false"` based on JavaScript validation results, providing real-time state information.
+  - Employing `visually-hidden` class for elements like `<legend>` or descriptive paragraphs that should be available to screen readers but not visually displayed.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- **Client-Side Validation and Feedback:**
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+  - Implementing robust client-side validation using JavaScript to check for empty required fields, correct email format, radio button selection, and checkbox consent.
+  - Providing immediate visual feedback by adding/removing an `.error-state` class to style invalid inputs (e.g., red borders) and displaying the corresponding error message `<span>`.
+  - Using a dedicated toast notification (`.toast-container`) that appears upon successful submission, offering clear confirmation to the user. The toast is initially hidden (`display: none`) and shown via JavaScript.
 
-### Continued development
+- **Custom Form Controls:**
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+  - Styling radio buttons and checkboxes using CSS `appearance: none` to hide the default browser controls and creating custom visuals with borders, background images (`::before` pseudo-element for radio buttons, `background-image` for checkboxes), while ensuring functionality and focus states remain intact.
+  - Making the entire container (`.radio-container`) clickable and visually responsive to selection using `:has(:checked)`.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- **Responsive Layout:**
 
-### Useful resources
+  - Utilizing CSS Grid (`display: grid`, `grid-template-columns`, `grid-column`) within media queries (`@media (min-width: ... )`) to create adaptive layouts, such as arranging user information fields into two columns on larger screens while keeping them stacked on smaller ones.
+  - Employing Flexbox for alignment and spacing within components like input containers, radio groups, and the toast message.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Overall, the project reinforced the importance of combining semantic HTML, thoughtful ARIA implementation, CSS for styling and layout, and JavaScript for interactivity and validation to create forms that are both functional and accessible to all users.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@gustavo2023](https://www.frontendmentor.io/profile/gustavo2023)
