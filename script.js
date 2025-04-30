@@ -99,6 +99,8 @@ const handleFormSubmit = () => {
 
   toastContainer.style.display = "flex";
 
+  contactForm.reset();
+
   setTimeout(() => {
     toastContainer.style.display = "none";
   }, 5000);
