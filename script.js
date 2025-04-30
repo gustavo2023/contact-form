@@ -52,6 +52,13 @@ const handleFormSubmit = () => {
   )?.value;
   const agreementChecked = agreementCheckbox.checked;
 
+  hideErrorMessage(firstNameInput);
+  hideErrorMessage(lastNameInput);
+  hideErrorMessage(emailInput);
+  hideErrorMessage(messageInput);
+  hideErrorMessage(queryTypeContainer);
+  hideErrorMessage(agreementCheckbox);
+
   if (!firstName) {
     showErrorMessage(firstNameInput);
     firstNameInput.classList.add("error-state");
