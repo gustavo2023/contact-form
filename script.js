@@ -6,7 +6,7 @@ const queryTypeContainer = document.querySelector(".query-type");
 const radioInputs = document.querySelectorAll('input[name="queryType"]');
 const messageInput = document.getElementById("message-input");
 const agreementCheckbox = document.getElementById("agreement-input");
-const toastContainer = document.getElementById("toast-container");
+const toastContainer = document.querySelector(".toast-container");
 
 const validateUserEmail = (email) => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -41,6 +41,8 @@ const hideErrorMessage = (inputElement) => {
 };
 
 const handleFormSubmit = () => {
+  let isValid = true;
+
   const firstName = firstNameInput.value.trim();
   const lastName = lastNameInput.value.trim();
   const email = emailInput.value.trim();
@@ -53,43 +55,36 @@ const handleFormSubmit = () => {
   if (!firstName) {
     showErrorMessage(firstNameInput);
     firstNameInput.classList.add("error-state");
-    return false;
+    isValid = false;
   }
 
   if (!lastName) {
     showErrorMessage(lastNameInput);
     lastNameInput.classList.add("error-state");
-    return false;
+    isValid = false;
   }
 
   if (!validateUserEmail(email) || !email) {
     showErrorMessage(emailInput);
     emailInput.classList.add("error-state");
-    return false;
+    isValid = false;
   }
 
   if (!message) {
     showErrorMessage(messageInput);
     messageInput.classList.add("error-state");
-    return false;
+    isValid = false;
   }
 
   if (!radioValue) {
     showErrorMessage(queryTypeContainer);
-    return false;
+    isValid = false;
   }
 
   if (!agreementChecked) {
     showErrorMessage(agreementCheckbox);
-    return false;
+    isValid = false;
   }
-
-  return true;
-};
-
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const isValid = handleFormSubmit();
 
   if (!isValid) {
     return;
@@ -100,4 +95,9 @@ contactForm.addEventListener("submit", (e) => {
   setTimeout(() => {
     toastContainer.style.display = "none";
   }, 5000);
+};
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  handleFormSubmit();
 });
